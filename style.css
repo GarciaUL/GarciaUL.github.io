@@ -66,7 +66,7 @@ header {
     background-repeat: no-repeat;
 }
 
-#hero .container{
+.hero .container{
     max-width: 1100px;
 }
 
