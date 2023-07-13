@@ -6,6 +6,8 @@
     user-select: none;
 }
 
+html
+
 ul{
     list-style: none;
 
@@ -18,20 +20,23 @@ h1{font-size: 3.5em;}
 h2{font-size: 2.7em;}
 h3{font-size: 2em;}
 p{font-size: 1.1em;}
-
-header {
-    position: fixed;
-    background-color: rgba(230,230,230);
-    top: 0;
-    left: 0;
+@media screen and (min-width:761px) {
+    
+    header {
+        position: fixed;
+        background-color: rgba(230,230,230);
+        top: 0;
+        left: 0;
     width: 100%;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;
+    z-index: 99;   
 }
 
-.logo{
+.logo-propio{
+    margin-bottom: 0;
     font-size: 2.2em;
     font-weight: bold;
     border-bottom: 3px solid;
@@ -39,7 +44,7 @@ header {
     user-select: none;
 }
 
-.navigation a{
+.navegacion a{
     position: relative;
     font-size: 1.1em;
     color: #000000;
@@ -48,7 +53,7 @@ header {
     margin-left: 40px;
 }
 
-.navigation a:hover{
+.navegacion a:hover{
     color: gray;
 }
 
@@ -87,7 +92,7 @@ header {
     0deg,
     rgba(0,0,0,0.5),
     rgba(0,0,0,0.5)), 
-    url("media/hero.jpg");
+    url("../images/hero.jpg");
 }
 
 
@@ -101,7 +106,7 @@ header {
 }
 
 .esposa .img-container-esposa{
-    background-image: url(media/esposa.jpg);
+    background-image: url(../images/esposa.jpg);
     background-size: cover;
     background-position: center center;
     height: 550px;
@@ -162,17 +167,17 @@ header {
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    )
-    ,url("media/thiagomessi.jpg");
-}
-
-.carta:nth-child(2){
-    background-image: linear-gradient(
-        0deg,
+        )
+        ,url("../images/thiagomessi.jpg");
+    }
+    
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/mateomessi.jpg");
+    ,url("../images/mateomessi.jpg");
 }
 
 .carta:last-child{
@@ -181,7 +186,7 @@ header {
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/ciromessi.jpg");
+    ,url("../images/ciromessi.jpg");
 }
 
 footer{
@@ -221,8 +226,8 @@ footer .imagenes img{
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    )
-    ,url("media/barca-hero-fondo.jpg");
+        )
+    ,url("../images/barca-hero-fondo.jpg");
 
 }
 
@@ -238,8 +243,8 @@ footer .imagenes img{
     color: black;
 }
 
-.trofeos #img-container-trophy-barca{
-    background-image: url(media/messi-titulos-barca.jpg);
+.trofeos .img-container-trophy-barca{
+    background-image: url(../images/messi-titulos-barca.jpg);
     background-size: cover;
     background-position: center center;
     height: 550px;
@@ -280,8 +285,8 @@ footer .imagenes img{
     justify-content: space-evenly;
 }
 
-.estadisticas #img-container-stats-barca{
-    background-image: url(media/messi-estadisticas-barca.jpg);
+.estadisticas .img-container-stats-barca{
+    background-image: url(../images/messi-estadisticas-barca.jpg);
     background-size: cover;
     background-position: center center;
     height: 550px;
@@ -311,28 +316,17 @@ footer .imagenes img{
 
 /*Inicio de argentina.html*/
 
-#argentina-hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    font-weight: bold;
-    height: 100vh;
-    color: rgb(255, 255, 255);
+.argentina-hero{
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/hero-argentina.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    ,url("../images/hero-argentina.jpg");
 }
 
-.trofeos #img-container-trophy-arg{
-    background-image: url(media/messi-titulos-argentina.jpg);
+.trofeos .img-container-trophy-arg{
+    background-image: url(../images/messi-titulos-argentina.jpg);
     background-size: cover;
     background-position: center center;
     height: 550px;
@@ -340,8 +334,8 @@ footer .imagenes img{
     margin-left: 100px;
 }
 
-.estadisticas #img-container-stats-arg{
-    background-image: url(media/messi-argentina.jpg);
+.estadisticas .img-container-stats-arg{
+    background-image: url(../images/messi-argentina.jpg);
     background-size: cover;
     background-position: center center;
     height: 550px;
@@ -357,12 +351,12 @@ footer .imagenes img{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/hero-psg.png");
+    ,url("../images/hero-psg.png");
 }
 
 
-.trofeos #img-container-trophy-psg{
-    background-image: url(media/messi-titulos-psg.jpg);
+.trofeos .img-container-trophy-psg{
+    background-image: url(../images/messi-titulos-psg.jpg);
     background-size: cover;
     background-position: center center;
     height: 550px;
@@ -370,8 +364,8 @@ footer .imagenes img{
     margin-left: 100px;
 }
 
-.estadisticas #img-container-stats-psg{
-    background-image: url(media/messi-estadisticas-psg.jpg);
+.estadisticas .img-container-stats-psg{
+    background-image: url(../images/messi-estadisticas-psg.jpg);
     background-size: cover;
     background-position: center center;
     height: 550px;
@@ -387,7 +381,7 @@ footer .imagenes img{
     rgba(0,0,0,0.5),
     rgba(0,0,0,0.5)
 )
-,url("media/contacto.jpg");
+,url("../images/contacto.jpg");
 background-position: center center;
 background-size: cover;
 background-repeat: no-repeat;
@@ -461,4 +455,203 @@ background-repeat: no-repeat;
 .btn-campo:hover{
     color: white;
     background-color: black;
+}
+}
+
+@media screen and (max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+    header a{
+        box-sizing: content-box;
+        text-decoration: none;
+        color: #000;
+        border-bottom: .5px solid gray;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .logo-propio{
+        margin-bottom: 0;
+        font-size: 35px;
+        font-weight: bold;
+        border-bottom: 3px solid;
+        color: #000000;
+        user-select: none;
+        text-align: center;
+    }
+
+    .index-hero{
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), 
+        url("../images/hero.jpg");
+    }
+
+    .hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        font-weight: bold;
+        height: 100vh;
+        color: #fff;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .hero a{
+        color: aqua;
+    }
+    .hero a:hover{
+        color: rgb(4, 194, 194);
+    }
+    
+    .hero h1{
+        color: white;
+        margin-bottom: 25px;
+    }
+
+    .hero p{
+        width: 50%;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .img-container-esposa{
+        display: none;
+    }
+
+    .esposa .container{
+        padding: 100px 10px;
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)), url(../images/esposa.jpg);
+        background-position: center center;
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
+    .esposa .text{
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center center;
+    }
+
+    .hijos{
+        background-color: rgba(30,30,30);
+        color: white;
+        text-align: center;
+    }
+    
+    .hijos .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 20px;
+    }
+    
+    .hijos h2{
+        padding: 30px 30px;
+        font-size: 50px;
+    }
+
+    .hijos .carta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+        height: 60vh;
+        margin: 10px 10px;
+        background-position: center center;
+        background-size: cover;
+        padding: 50px;
+        margin: 12px;
+        border-radius: 15px;
+    }
+    
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+            )
+            ,url("../images/thiagomessi.jpg");
+            
+        }
+        
+        .carta:nth-child(2){
+            background-image: linear-gradient(
+                0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("../images/mateomessi.jpg");
+    }
+    
+    .carta:last-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("../images/ciromessi.jpg");
+    }
+
+    footer{
+        background-color: rgba(220,220,220);
+    }
+    
+    footer p{
+        margin: 0;
+        padding: 8px;
+        color: rgb(100,100,100);
+        font-size: 20px;
+    }
+    
+    footer .container{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    footer .imagenes{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;    
+    }
+    
+    footer .imagenes img{
+        height: 30px;
+        width: 30px;
+        margin: 5px 8px;
+    }
+    
 }
