@@ -21,7 +21,6 @@ h3{font-size: 2em;}
 p{font-size: 1.1em;}
 
 @media screen and (min-width:761px){
-
 header {
     position: fixed;
     background-color: #241E20;
@@ -60,7 +59,6 @@ header {
     height: 100vh;
     background-position: center;
     background-size: cover;
-    transform: translateY(10%);
     display: grid;
     place-items: center;
 }
@@ -75,6 +73,7 @@ header {
     font-size: 3em;
     color: #fff;
 }
+
 .section {
     display: flex;
     align-items: center;
@@ -582,6 +581,25 @@ footer .imagenes img{
         flex-direction: column;
         text-align: center;
         margin-left: 0;
+    }
+
+    .hero{
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        display: grid;
+        place-items: center;
+    }
+    
+    .hero .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero h2{
+        font-size: 3em;
+        color: #fff;
     }
 
     .img-container-esposa{
